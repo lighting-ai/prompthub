@@ -97,28 +97,28 @@ PromptHub is a comprehensive platform designed to help you organize, optimize, a
 ### Setup
 
 1. Clone the repository:
-   \`\`\`bash
+   ```bash
    git clone https://github.com/yourusername/prompthub.git
    cd prompthub
-   \`\`\`
+   ```
 2. Install dependencies:
-   \`\`\`bash
+   ```bash
    npm install
-   \`\`\`
+   ```
 3. Set up environment variables:
-   \`\`\`bash
+   ```bash
    cp .env.example .env.local
-   \`\`\`
+   ```
    Edit `.env.local` with your configuration.
 4. Run the development server:
-   \`\`\`bash
+   ```bash
    npm run dev
-   \`\`\`
+   ```
 5. Build for production:
-   \`\`\`bash
+   ```bash
    npm run build
    npm start
-   \`\`\`
+   ```
 
 ## Usage
 
@@ -177,55 +177,58 @@ PromptHub provides a RESTful API for integrating with other applications:
 
 ### Authentication
 
-\`\`\`
+```
 POST /api/auth/token
-\`\`\`
+```
 
 Request body:
-\`\`\`json
+
+```json
 {
-"email": "user@example.com",
-"password": "your_password"
+  "email": "user@example.com",
+  "password": "your_password"
 }
-\`\`\`
+```
 
 Response:
-\`\`\`json
+
+```json
 {
-"token": "your_jwt_token",
-"expiresIn": 3600
+  "token": "your_jwt_token",
+  "expiresIn": 3600
 }
-\`\`\`
+```
 
 ### Prompts
 
 #### Get all prompts
 
-\`\`\`
+```
 GET /api/prompts
-\`\`\`
+```
 
 #### Get a specific prompt
 
-\`\`\`
+```
 GET /api/prompts/:id
-\`\`\`
+```
 
 #### Create a prompt
 
-\`\`\`
+```
 POST /api/prompts
-\`\`\`
+```
 
 Request body:
-\`\`\`json
+
+```json
 {
-"title": "My Prompt",
-"content": "This is my prompt content",
-"tags": ["tag1", "tag2"],
-"outputType": "text"
+  "title": "My Prompt",
+  "content": "This is my prompt content",
+  "tags": ["tag1", "tag2"],
+  "outputType": "text"
 }
-\`\`\`
+```
 
 See the [API documentation](docs/api.md) for more details.
 

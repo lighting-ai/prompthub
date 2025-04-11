@@ -21,36 +21,42 @@
 
 ## 概述
 
-PromptHub是一个全面的平台，旨在帮助您组织、优化和分享AI提示词。无论您是开发人员、内容创作者还是AI爱好者，PromptHub都能提供有效管理提示词并与他人协作的工具。
+PromptHub 是一个全面的平台，旨在帮助您组织、优化和分享 AI 提示词。无论您是开发人员、内容创作者还是 AI 爱好者，PromptHub 都能提供有效管理提示词并与他人协作的工具。
 
 ## 功能特点
 
 ### 本地优先安全
+
 - **端到端加密**：通过强大的加密保护您的提示词安全
 - **自动本地备份**：永不丢失您宝贵的提示词
 - **可选云同步**：自由选择何时以及同步哪些内容到云端
 
 ### 智能组织
+
 - **基于文件夹的管理**：在直观的文件夹结构中组织提示词
 - **基于标签的分类**：添加标签使提示词易于搜索
 - **输出类型分类**：按输出类型（文本、代码、图像等）对提示词进行分类
 
 ### 社区共享
+
 - **公开或私人共享**：选择哪些提示词与社区共享
 - **发现热门提示词**：查找来自其他用户的流行提示词
 - **关注创作者**：跟踪您喜爱的提示词创作者
 
-### Markdown编辑器
+### Markdown 编辑器
+
 - **实时预览**：边输入边查看提示词的效果
 - **版本历史**：跟踪提示词随时间的变化
 - **语法高亮**：提高代码块的可读性
 
 ### 收藏集
+
 - **一键收藏**：保存您经常使用的提示词
 - **组织收藏视图**：轻松访问您收藏的提示词
 - **快速访问**：更快地获取您最常用的提示词
 
 ### 输出分类
+
 - **代码、文本、图像分类**：按输出类型筛选提示词
 - **视频和音频支持**：支持多媒体提示词输出
 - **自定义输出类型**：定义您自己的输出类别
@@ -84,38 +90,45 @@ PromptHub是一个全面的平台，旨在帮助您组织、优化和分享AI提
 ## 安装
 
 ### 前提条件
-- Node.js 16.x或更高版本
-- npm 8.x或更高版本
+
+- Node.js 16.x 或更高版本
+- npm 8.x 或更高版本
 
 ### 设置
 
 1. 克隆仓库：
-\`\`\`bash
+
+```bash
 git clone https://github.com/yourusername/prompthub.git
 cd prompthub
-\`\`\`
+```
 
 2. 安装依赖：
-\`\`\`bash
+
+```bash
 npm install
-\`\`\`
+```
 
 3. 设置环境变量：
-\`\`\`bash
+
+```bash
 cp .env.example .env.local
-\`\`\`
+```
+
 编辑`.env.local`进行配置。
 
 4. 运行开发服务器：
-\`\`\`bash
+
+```bash
 npm run dev
-\`\`\`
+```
 
 5. 生产环境构建：
-\`\`\`bash
+
+```bash
 npm run build
 npm start
-\`\`\`
+```
 
 ## 使用方法
 
@@ -124,7 +137,7 @@ npm start
 1. 导航到仪表板
 2. 点击"新建提示词"按钮
 3. 输入标题和描述
-4. 使用Markdown编写提示词内容
+4. 使用 Markdown 编写提示词内容
 5. 添加标签并选择输出类型
 6. 点击"保存提示词"
 
@@ -168,75 +181,78 @@ npm start
 - **权限**：为不同成员设置访问级别
 - **账单**：管理订阅和支付详情
 
-## API文档
+## API 文档
 
-PromptHub提供RESTful API，可与其他应用程序集成：
+PromptHub 提供 RESTful API，可与其他应用程序集成：
 
 ### 认证
 
-\`\`\`
+```
 POST /api/auth/token
-\`\`\`
+```
 
 请求体：
-\`\`\`json
+
+```json
 {
   "email": "user@example.com",
   "password": "your_password"
 }
-\`\`\`
+```
 
 响应：
-\`\`\`json
+
+```json
 {
   "token": "your_jwt_token",
   "expiresIn": 3600
 }
-\`\`\`
+```
 
 ### 提示词
 
 #### 获取所有提示词
 
-\`\`\`
+```
 GET /api/prompts
-\`\`\`
+```
 
 #### 获取特定提示词
 
-\`\`\`
+```
 GET /api/prompts/:id
-\`\`\`
+```
 
 #### 创建提示词
 
-\`\`\`
+```
 POST /api/prompts
-\`\`\`
+```
 
 请求体：
-\`\`\`json
+
+```json
 {
   "title": "我的提示词",
   "content": "这是我的提示词内容",
   "tags": ["标签1", "标签2"],
   "outputType": "text"
 }
-\`\`\`
+```
 
-更多详情请参阅[API文档](docs/api.md)。
+更多详情请参阅[API 文档](docs/api.md)。
 
 ## 贡献
 
-我们欢迎对PromptHub的贡献！请查看我们的[CONTRIBUTING.md](CONTRIBUTING.md)了解如何提交拉取请求、报告错误和建议功能。
+我们欢迎对 PromptHub 的贡献！请查看我们的[CONTRIBUTING.md](CONTRIBUTING.md)了解如何提交拉取请求、报告错误和建议功能。
 
 ## 许可证
 
-本项目采用MIT许可证 - 详情请参阅[LICENSE](LICENSE)文件。
+本项目采用 MIT 许可证 - 详情请参阅[LICENSE](LICENSE)文件。
 
 ## 致谢
 
-- [Next.js](https://nextjs.org/) - 使用的React框架
+- [Next.js](https://nextjs.org/) - 使用的 React 框架
 - [Tailwind CSS](https://tailwindcss.com/) - 用于样式设计
 - [Vercel](https://vercel.com/) - 用于部署
 - [所有贡献者](../../contributors)
